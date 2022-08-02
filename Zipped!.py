@@ -5,6 +5,7 @@ for i in range(m):
     total_score.append(list(map(float, input().split())))
 for elem in zip(*total_score):
     print(average(elem))
+    
 # Sample input
 # 5 3
 # 89 90 78 93 80
