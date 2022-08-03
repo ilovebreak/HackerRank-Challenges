@@ -15,7 +15,8 @@ print(int(abs(date1_fmt - date2_fmt).total_seconds()))
 
 #Final short submission:
 # for i in range(int(input())):
-#     print(int(abs((dt.strptime(input(), fmt) - dt.strptime(input(), fmt)).total_seconds())))
+#     print(int(abs((dt.strptime(input(), fmt) - 
+#                    dt.strptime(input(), fmt)).total_seconds())))
 
 # Sample Input 0
 # 2
