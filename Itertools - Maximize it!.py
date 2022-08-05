@@ -1,18 +1,26 @@
 from itertools import product
 def sq(n):
     return n ** 2
-iters, M = list(map(int, input().split()))
+iters, M = map(int, input().split())
 my_list = []
 for i in range(iters):
-    my_list.append(list(map(int, input().split()[1:])))
+    my_list.append(map(int, input().split()[1:]))
 result = max(product(*my_list), key=lambda x: sum(map(sq,x)) % M)
 print(sum(map(sq,result)) % M)
+
+# Sample Input
+# 3 1000
+# 2 5 4
+# 3 7 8 9 
+# 5 5 7 8 9 10
+# Sample Output
+# 206
 
 # 7 499
 # 7 1181757 1762389 6060211 7142272 9406442 1686377 5633233
 # 7 1428878 2889304 2088404 5950331 7246707 5436314 2817810
 # 7 2461667 6926161 1012101 6916766 6980133 4096554 781435
-# 7 328967 6988424 2130854 9118793 323249 6942746 121208
+# 7 328967 6988424 2130854 9118793 323249 6942746 21208
 # 7 994528 7275084 6858707 2176285 1553824 2918917 1834908
 # 7 960266 4605293 9984492 4905495 7494597 4589248 3372177
 # 7 7257655 25561 6189986 2235674 9468073 9718438 9152439
