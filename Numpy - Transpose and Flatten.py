@@ -1,9 +1,6 @@
 import numpy
 n, m = map(int, input().split())
-my_list = []
-for _ in range(n):
-    my_list.append(list(map(int, input().split())))
-arr = numpy.array(my_list)
+arr = numpy.array([input().split() for _ in range(n)], int)
 print(numpy.transpose(arr))
 print(arr.flatten())
 
